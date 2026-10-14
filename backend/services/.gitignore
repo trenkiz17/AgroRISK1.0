@@ -1,0 +1,17 @@
+# Credenciais e configuracoes locais
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Dados e backups locais
+*.sql.gz
+*.sql.bak
+*.sqlite3

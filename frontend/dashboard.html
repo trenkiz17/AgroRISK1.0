@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgroRisk | Dashboard</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-seedling"></i>
+
+            <span>AgroRisk</span>
+
+        </div>
+
+        <ul>
+
+            <li class="active">
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="cadastro_propriedade.html">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    Cadastro de Propriedades
+                </a>
+            </li>
+
+            <li>
+                <a href="propriedades.html">
+                    <i class="fa-solid fa-wheat-awn"></i>
+                    Minhas Propriedades
+                </a>
+            </li>
+
+            <li>
+                <a href="relatorios.html">
+                    <i class="fa-solid fa-chart-column"></i>
+                    Relatórios
+                </a>
+            </li>
+
+            <li>
+                <a href="perfil.html">
+                    <i class="fa-solid fa-user"></i>
+                    Perfil
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="sidebar-footer">
+
+            <a href="#" id="btnLogout">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Sair
+
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- CONTEÚDO -->
+
+    <main class="main-content">
+
+        <!-- TOPO -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h2>Dashboard</h2>
+
+                <span>Bem-vindo ao AgroRisk</span>
+
+            </div>
+
+
+            <div class="perfil-topo">
+
+                <!-- Foto cadastrada no Perfil -->
+                <img id="fotoUsuarioDashboard" alt="Foto do usuário" style="display: none;">
+
+                <!-- Ícone exibido enquanto não houver foto -->
+                <i id="iconeUsuarioDashboard" class="fa-solid fa-circle-user" aria-hidden="true"></i>
+
+                <div>
+                    <strong id="usuario">Usuário</strong>
+                    <small>Conta AgroRisk</small>
+                </div>
+
+            </div>
+
+
+        </header>
+
+        <!-- HERO -->
+
+        <section class="hero-dashboard">
+
+            <div>
+
+                <h1>
+
+                    Bem-vindo de volta,
+
+                    <span id="usuario2">Leonardo</span>
+
+                    👋
+
+                </h1>
+
+                <p>
+
+                    Organize suas propriedades rurais,
+                    acompanhe suas safras e tenha uma visão geral
+                    dos seus registros agrícolas em um só lugar.
+
+                </p>
+
+            </div>
+
+            <div class="hero-icon">
+
+                <i class="fa-solid fa-tractor"></i>
+
+            </div>
+
+        </section>
+
+        <!-- CARDS -->
+
+
+        <!-- ==========================================
+     INDICADORES DO DASHBOARD
+========================================== -->
+
+        <section class="cards-dashboard">
+
+            <div class="card-info">
+
+                <div>
+                    <small>Propriedades cadastradas</small>
+                    <h2 id="totalPropriedades">--</h2>
+                </div>
+
+                <i class="fa-solid fa-map-location-dot"></i>
+
+            </div>
+
+            <div class="card-info">
+
+                <div>
+                    <small>Safras cadastradas</small>
+                    <h2 id="totalSafras">--</h2>
+                </div>
+
+                <i class="fa-solid fa-wheat-awn"></i>
+
+            </div>
+
+            <div class="card-info">
+
+                <div>
+                    <small>Área total das propriedades</small>
+                    <h2 id="areaTotal">--</h2>
+                </div>
+
+                <i class="fa-solid fa-ruler-combined"></i>
+
+            </div>
+
+            <div class="card-info">
+
+                <div>
+                    <small>Propriedades com safras</small>
+                    <h2 id="propriedadesComSafras">--</h2>
+                </div>
+
+                <i class="fa-solid fa-seedling"></i>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACESSO RÁPIDO -->
+
+        <h3 class="titulo-secao">
+
+            Acesso rápido
+
+        </h3>
+
+
+        <!-- ==========================================
+     ACESSO RÁPIDO
+========================================== -->
+
+        <section class="acoes-grid">
+
+            <a href="cadastro_propriedade.html" class="acao-card">
+
+                <div class="icone">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                </div>
+
+                <h4>Cadastrar Propriedade</h4>
+
+                <p>
+                    Cadastre uma propriedade rural,
+                    informe sua localização e
+                    delimite a área diretamente no mapa.
+                </p>
+
+                <span>
+                    Cadastrar propriedade
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+
+            </a>
+
+            <a href="propriedades.html" class="acao-card">
+
+                <div class="icone">
+                    <i class="fa-solid fa-tractor"></i>
+                </div>
+
+                <h4>Minhas Propriedades</h4>
+
+                <p>
+                    Visualize suas propriedades cadastradas
+                    e escolha uma delas para consultar
+                    seus detalhes e suas safras.
+                </p>
+
+                <span>
+                    Visualizar propriedades
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+
+            </a>
+
+        </section>
+
+
+        <!-- PAINÉIS -->
+
+
+        <!-- ==========================================
+     RESUMO DOS REGISTROS
+========================================== -->
+
+        <section class="painel-grid dashboard-paineis">
+
+            <!-- PROPRIEDADES RECENTES -->
+
+            <article class="painel">
+
+                <div class="dashboard-painel-cabecalho">
+
+                    <h4>
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        Suas Propriedades
+                    </h4>
+
+                    <a href="propriedades.html" class="dashboard-ver-todos">
+                        Ver todas
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+                <p class="dashboard-painel-descricao">
+                    As últimas propriedades cadastradas
+                    na sua conta.
+                </p>
+
+                <ul id="resumoPropriedades" class="dashboard-lista">
+                    <li class="dashboard-vazio">
+                        Carregando propriedades...
+                    </li>
+                </ul>
+
+            </article>
+
+
+            <!-- SAFRAS RECENTES -->
+
+            <article class="painel">
+
+                <div class="dashboard-painel-cabecalho">
+
+                    <h4>
+                        <i class="fa-solid fa-wheat-awn"></i>
+                        Suas Safras
+                    </h4>
+
+                    <a href="safras.html" class="dashboard-ver-todos">
+                        Ver safras
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+                <p class="dashboard-painel-descricao">
+                    As últimas safras cadastradas
+                    nas suas propriedades.
+                </p>
+
+                <ul id="resumoSafras" class="dashboard-lista">
+                    <li class="dashboard-vazio">
+                        Carregando safras...
+                    </li>
+                </ul>
+
+            </article>
+
+        </section>
+
+
+        <!-- AVISO DE ERRO DA API -->
+
+        <div id="avisoDashboard" class="alert alert-warning mt-4" role="status" aria-live="polite" hidden></div>
+
+
+        <!-- ORIENTAÇÃO PARA O USUÁRIO -->
+
+        <section class="dashboard-orientacao">
+
+            <i class="fa-solid fa-circle-info"></i>
+
+            <div>
+
+                <strong>Como acompanhar sua produção?</strong>
+
+                <p>
+                    Primeiro cadastre uma propriedade.
+                    Depois, acesse suas propriedades
+                    para gerenciar as safras e,
+                    futuramente, acompanhar o clima
+                    e os riscos agrícolas da região.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- RODAPÉ -->
+
+        <footer class="dashboard-footer">
+
+            © 2026 AgroRisk • Sistema Inteligente de Monitoramento Agrícola
+
+        </footer>
+
+    </main>
+
+    <script src="js/api.js"></script>
+
+    <script src="js/dashboard.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

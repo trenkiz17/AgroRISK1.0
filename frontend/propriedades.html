@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgroRisk | Minhas Propriedades</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-seedling"></i>
+
+            <span>AgroRisk</span>
+
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="cadastro_propriedade.html">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    Propriedades
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="propriedades.html">
+                    <i class="fa-solid fa-wheat-awn"></i>
+                    minhas propiedades
+                </a>
+            </li>
+
+            <li>
+                <a href="relatorios.html">
+                    <i class="fa-solid fa-chart-column"></i>
+                    Relatórios
+                </a>
+            </li>
+
+            <li>
+                <a href="perfil.html">
+                    <i class="fa-solid fa-user"></i>
+                    Perfil
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="sidebar-footer">
+
+            <a href="#" id="btnLogout">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Sair
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <main class="main-content">
+
+        <header class="topbar">
+
+            <div>
+
+                <h2>Minhas Propriedades</h2>
+
+                <span>Selecione uma propriedade para acessar o monitoramento</span>
+
+            </div>
+
+
+            <div class="perfil-topo">
+
+                <img id="fotoUsuarioPropriedades" src="img/user.png" alt="Foto do usuário" hidden>
+
+                <i id="iconeUsuarioPropriedades" class="fa-solid fa-circle-user"
+                    style="font-size: 50px; color: #16a34a;" aria-hidden="true"></i>
+
+                <div>
+                    <strong id="nomeUsuarioPropriedades">
+                        Usuário
+                    </strong>
+
+                    <small>AgroRisk</small>
+                </div>
+
+            </div>
+
+
+        </header>
+
+
+        <section class="propriedades-page">
+
+            <div class="propriedades-header">
+
+                <div>
+
+                    <h1>
+
+                        <i class="fa-solid fa-map-location-dot"></i>
+
+                        Minhas Propriedades
+
+                    </h1>
+
+                    <p>
+                        Escolha uma propriedade para visualizar seu monitoramento.
+                    </p>
+
+                </div>
+
+                <a href="cadastro_propriedade.html" class="btn-nova-propriedade">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Nova Propriedade
+
+                </a>
+
+            </div>
+
+
+            <div id="listaPropriedades" class="propriedades-grid">
+
+                <div class="propriedades-loading">
+
+                    <i class="fa-solid fa-spinner fa-spin"></i>
+
+                    Carregando propriedades...
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <footer class="dashboard-footer">
+
+            © 2026 AgroRisk • Sistema Inteligente de Monitoramento Agrícola
+
+        </footer>
+
+    </main>
+
+
+    <script src="js/api.js"></script>
+
+    <script src="js/propriedades.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

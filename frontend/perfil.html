@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgroRisk | Meu Perfil</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+        <div class="logo">
+            <i class="fa-solid fa-seedling"></i>
+            <span>AgroRisk</span>
+        </div>
+
+        <ul>
+            <li>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="cadastro_propriedade.html">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    Cadastrar Propriedade
+                </a>
+            </li>
+
+            <li>
+                <a href="propriedades.html">
+                    <i class="fa-solid fa-wheat-awn"></i>
+                    Minhas Propriedades
+                </a>
+            </li>
+
+            <li>
+                <a href="relatorios.html">
+                    <i class="fa-solid fa-chart-column"></i>
+                    Relatórios
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="perfil.html">
+                    <i class="fa-solid fa-user"></i>
+                    Meu Perfil
+                </a>
+            </li>
+        </ul>
+
+        <div class="sidebar-footer">
+            <a href="#" id="btnLogout">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Sair
+            </a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <div class="profile-page">
+
+            <header class="topbar">
+                <div>
+                    <h2>Meu Perfil</h2>
+                    <span>Gerencie suas informações e sua conta AgroRisk.</span>
+                </div>
+
+                <a href="dashboard.html" class="btn btn-outline-success">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Voltar ao Dashboard
+                </a>
+            </header>
+
+            <div class="profile-content">
+
+                <div class="profile-left">
+
+                    <section class="profile-card perfil-identidade">
+
+
+                        <div class="profile-photo-area">
+
+                            <img id="previewFoto" class="profile-photo" alt="Sua foto de perfil">
+
+                            <input type="file" id="fotoPerfil" accept="image/*" hidden>
+
+                            <button type="button" class="btn-profile-photo"
+                                onclick="document.getElementById('fotoPerfil').click()">
+                                <i class="fa-solid fa-camera"></i>
+                                Alterar Foto
+                            </button>
+
+                        </div>
+
+                        <h3 id="nomeCartao">Carregando...</h3>
+                        <p id="emailCartao">---</p>
+
+                        <span class="badge text-bg-success">
+                            Conta AgroRisk
+                        </span>
+
+                    </section>
+
+                    <section class="profile-card">
+
+                        <h3>Informações da Conta</h3>
+
+                        <div class="profile-info">
+
+                            <div class="info-item">
+                                <span>ID do Usuário</span>
+                                <strong id="contaId">---</strong>
+                            </div>
+
+                            <div class="info-item">
+                                <span>E-mail cadastrado</span>
+                                <strong id="contaEmail">---</strong>
+                            </div>
+
+                            <div class="info-item">
+                                <span>Armazenamento</span>
+                                <strong>Banco de dados AgroRisk</strong>
+                            </div>
+
+                        </div>
+                    </section>
+
+                </div>
+
+                <div class="profile-right">
+
+                    <section class="profile-card">
+
+                        <h3>
+                            <i class="fa-solid fa-address-card"></i>
+                            Informações Pessoais
+                        </h3>
+
+                        <form id="perfilForm">
+
+                            <div class="profile-grid">
+
+                                <div class="form-group">
+                                    <label for="nome">Nome Completo *</label>
+                                    <input type="text" id="nome" class="form-control" maxlength="100" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">E-mail *</label>
+                                    <input type="email" id="email" class="form-control" maxlength="120" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="telefonefield">Telefone</label>
+                                    <input type="tel" id="telefonefield" class="form-control" maxlength="15"
+                                        placeholder="(00) 00000-0000">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="cpffield">CPF</label>
+                                    <input type="text" id="cpffield" class="form-control" maxlength="14"
+                                        placeholder="000.000.000-00">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="dataNascimento">Data de Nascimento</label>
+                                    <input type="date" id="dataNascimento" class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="estado">Estado</label>
+                                    <input type="text" id="estado" class="form-control" maxlength="100"
+                                        placeholder="Ex.: Minas Gerais">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="cidade">Cidade</label>
+                                    <input type="text" id="cidade" class="form-control" maxlength="100"
+                                        placeholder="Sua cidade">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="idioma">Idioma Preferido</label>
+                                    <select id="idioma" class="form-control">
+                                        <option value="Português">Português</option>
+                                        <option value="English">English</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+                            <div id="mensagemPerfil" class="mensagem-perfil" role="status" aria-live="polite" hidden>
+                            </div>
+
+                            <div class="profile-actions">
+
+                                <button type="button" id="btnCancelarPerfil" class="btn-profile-cancel">
+                                    Desfazer
+                                </button>
+
+                                <button type="submit" id="btnSalvarPerfil" class="btn-profile-save">
+                                    <i class="fa-solid fa-floppy-disk"></i>
+                                    Salvar Alterações
+                                </button>
+
+                            </div>
+
+                        </form>
+
+                    </section>
+
+                    <div class="alert alert-light border">
+                        <i class="fa-solid fa-shield-halved text-success"></i>
+                        Seus dados pessoais são vinculados à sua conta.
+                        Alterações de senha e foto de perfil serão
+                        implementadas separadamente.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/perfil.js"></script>
+
+</body>
+
+</html>
