@@ -1,6 +1,4 @@
-Agora entendi exatamente o que você queria: **o mesmo README que você mandou, mantendo a mesma organização e formatação, apenas acrescentando as informações novas do projeto**, sem transformar em outro README.
 
-Abaixo está tudo em **um único código**, pronto para você copiar e substituir o antigo:
 
 ````markdown
 # AgroRisk
